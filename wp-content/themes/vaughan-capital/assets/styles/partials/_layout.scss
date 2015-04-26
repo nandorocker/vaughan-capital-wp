@@ -13,11 +13,13 @@
 .nav {
     text-transform: uppercase;
     font-weight: bold;
+    font-size: .8em;
 
     /* Override Bootstrap's navigation margins so it can left-align with page */
-    // > li:first-child > a {
-    //     right: 15px;
-    // }
+    > li > a {
+        padding-right: $line-height-computed;
+        padding-left: $line-height-computed*0.25;
+    }
 }
 
 .navbar {
@@ -34,18 +36,17 @@
  * Home
  */
  .home {
-  background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
-  @include bg-cover;
+    background: url('../assets/images/home-bg-la.png') no-repeat center center fixed;
+    @include bg-cover;
 
-  .intro {
-  	position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
+    p {
+        margin: 0;
+    }
 
-.home-intro-title {
-	min-height: 70vh;
+    .intro {
+        min-height: 50vh;
+        padding: $line-height-computed*3 0 $line-height-computed*6 0;
+    }
 }
 
 @include md {
@@ -107,12 +108,22 @@
  * Footer
  */
 footer {
-    .site-footer {
+    &.site-footer {
         margin-top: $line-height-computed*3;
 
         p {
             font-size: $font-size-small;
             color: $gray-light;
         }
+    }
+
+    .home &.site-footer {
+        p {
+            color: $white;
+        }
+    }
+
+    .disclaimer {
+        margin-top: $line-height-computed*0.8;
     }
 }
