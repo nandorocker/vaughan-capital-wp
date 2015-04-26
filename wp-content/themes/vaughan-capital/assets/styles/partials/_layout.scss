@@ -47,6 +47,10 @@
         min-height: 50vh;
         padding: $line-height-computed*3 0 $line-height-computed*6 0;
     }
+
+    .entry-title {
+        display: none;
+    }
 }
 
 @include md {
