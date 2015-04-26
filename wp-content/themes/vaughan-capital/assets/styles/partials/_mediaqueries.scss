@@ -1,0 +1,51 @@
+// Media queries following Bootstrap's
+//
+
+// xs only
+@mixin xs-only {
+	@media (max-width: $screen-xs-max) {
+		@content;
+	}
+}
+
+// sm only
+@mixin sm-only {
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+		@content;
+	}
+}
+
+// md only
+@mixin md-only {
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+		@content;
+	}
+}
+
+// xs and bigger
+@mixin xs {
+	@media (max-width: $screen-xs-max) {
+		@content;
+	}
+}
+
+// sm and bigger
+@mixin sm {
+	@media (min-width: $screen-sm-min) {
+		@content;
+	}
+}
+
+// md and bigger
+@mixin md {
+	@media (min-width: $screen-md-min) {
+		@content;
+	}
+}
+
+// lg
+@mixin lg {
+	@media (min-width: $screen-lg-min) {
+		@content;
+	}
+}

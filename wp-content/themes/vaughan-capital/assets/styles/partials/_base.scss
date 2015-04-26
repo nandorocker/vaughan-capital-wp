@@ -1,0 +1,74 @@
+body {
+    min-height: 700px;
+    min-height: 100vh;
+	border: 1.1rem solid #fff;
+
+	&:before, &:after {
+		z-index: 99999;
+		content: "";
+		position: fixed;
+		background: #fff;
+		left: 0;
+		right: 0;
+		height: 1.1rem;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+}
+
+p {
+	margin-top: $line-height-computed;
+	margin-bottom: $line-height-computed;
+}
+
+h1, h2 {
+    margin-top: $line-height-computed*3;
+    margin-bottom: $line-height-computed;
+
+    &:first-child {
+    	margin-top: 0;
+    }
+}
+
+h3, h4 {
+	em {
+		font-weight: normal;
+	}
+}
+
+hr {
+	border: 1px solid $gray-dark;
+	margin: $line-height-computed*2 0;
+}
+
+blockquote {
+	border-left: none;
+	margin: 0;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+
+	&:before {
+		color: #ccc;
+		content: open-quote;
+		font-size: 4em;
+		line-height: 0.1em;
+		margin-right: 0.25em;
+		vertical-align: -0.4em;
+	}
+
+	p {
+		display: inline;
+	}
+
+	footer {
+		margin-top: $line-height-computed;
+		font-style: italic;
+		// font-size: $font-size-small;
+	}
+}

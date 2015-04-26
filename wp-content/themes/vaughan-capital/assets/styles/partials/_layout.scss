@@ -1,29 +1,118 @@
-/* ==========================================================================
-   Layout
-   ========================================================================== */
+/*
+ * Navigation
+ */
 
-#page {
-	max-width: $pageWidth;
-	margin: 20px auto;
+ .navbar-brand > img {
+    display: block;
+    position: relative;
+    left: -3rem;
+    top: -3.5rem;
+    width: 20rem;
 }
 
-.content-area {
-	float: left;
-	margin: 0 -25% 0 0;
-	width: 100%;
+.nav {
+    text-transform: uppercase;
+    font-weight: bold;
+
+    /* Override Bootstrap's navigation margins so it can left-align with page */
+    // > li:first-child > a {
+    //     right: 15px;
+    // }
 }
 
-.site-main {
-	margin: 0 25% 0 0;
+.navbar {
+    margin: $line-height-computed*3 0;
 }
 
-.site-content .widget-area {
-	float: right;
-	overflow: hidden;
-	width: 25%;
+.navbar-default {
+    background-color: transparent;
+    border: 0;
 }
 
-.site-footer {
-	clear: both;
-	width: 100%;
+
+/*
+ * Home
+ */
+ .home {
+  background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
+  @include bg-cover;
+
+  .intro {
+  	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.home-intro-title {
+	min-height: 70vh;
+}
+
+@include md {
+	h2.sidebar-line {
+		display: inline-block;
+		padding-bottom: 2em;
+		border-bottom: 4px solid $brand-secondary;
+	}
+}
+
+/*
+ * Internal Pages
+ */
+.page {
+
+}
+
+.content {
+    padding: $line-height-computed*3 0; 
+    margin-bottom: $line-height-computed*3; 
+    border-top: 2px solid $brand-secondary;
+    border-bottom: 2px solid $brand-secondary;
+}
+
+.header-image {
+    img {
+        width: 100%;
+    }
+
+    margin-bottom: $line-height-computed*3;
+}
+
+/*
+ * Contact page
+ */
+.contact {
+    blockquote {
+        margin-top: $line-height-computed*3;
+    }
+}
+/* Google maps */
+.google-maps {
+    position: relative;
+    margin-bottom: $line-height-computed*3;
+    padding-bottom: 50%; /* This is the aspect ratio */
+    height: 0;
+    overflow: hidden;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+/*
+ * Footer
+ */
+footer {
+    .site-footer {
+        margin-top: $line-height-computed*3;
+
+        p {
+            font-size: $font-size-small;
+            color: $gray-light;
+        }
+    }
 }

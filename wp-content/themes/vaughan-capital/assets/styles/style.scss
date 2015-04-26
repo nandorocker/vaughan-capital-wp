@@ -18,35 +18,99 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 */
 
-// Reset, Variables, Mixins, Etc
-// DO NOT EDIT ORDER OF FILES
-@import "partials/mixins";
-@import "partials/variables";
-@import "partials/normalize";
+@charset "utf-8";
 
-// Globals
-@import "partials/h5bp-global";
-@import "partials/general";
-@import "partials/grid";
+//
+// Variables
+// --------------------------------------------------
 
-// Layout
-@import "partials/layout";
-@import "partials/header";
-@import "partials/footer";
+// Bootstrap Customization
 
-// Menus, Page and Post styles
-@import "partials/menus";
-@import "partials/page-post";
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
 
-// Page Templates
-@import "partials/page-home";
-@import "partials/page-blog";
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 33.5%) !default; // #555
+$gray-light:             lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$white:					 #fff !default;
 
-// Widgets, Search, Comments, Forms, Sharing
-@import "partials/widgets";
-@import "partials/comments";
-@import "partials/forms";
+$brand-primary:         darken(#428bca, 6.5%) !default; // #337ab7
+$brand-secondary:		#1B7EC6;
+$brand-success:         #5cb85c !default;
+$brand-info:            #5bc0de !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #d9534f !default;
 
-// Helper Classes, Print, Etc
-@import "partials/helpers";
-@import "partials/print";
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               #2C2C2C !default;
+//** Global text color on `<body>`.
+$text-color:            #fff !default;
+
+//** Global textual link color.
+$link-color:            $white !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 15%) !default;
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       "ff-meta-serif-web-pro", "Times New Roman", Times, serif !default;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
+$font-family-base:        $font-family-sans-serif !default;
+
+$font-size-base:          16px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:			  3.6rem;
+$font-size-h2:			  3.4rem;
+$font-size-h3:			  2.6rem;
+$font-size-h4:			  2.1rem;
+$font-size-h5:			  1.8rem;
+$font-size-h6:			  1.4rem;
+
+//** Unit-less `line-height` for use in components like buttons.
+$line-height-base:        1.428571429 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+//** By default, this inherits from the `<body>`.
+$headings-font-family:    $font-family-serif; //inherit !default;
+$headings-font-weight:    700 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          inherit !default;
+
+// Navbar
+$navbar-default-bg:		  transparent !default;
+$navbar-default-link-color:                #fff !default;
+$navbar-default-link-hover-color:          #5DB3E7 !default;
+$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-active-color:         #555 !default;
+$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-disabled-bg:          transparent !default;
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+		"partials/bootstrap",
+		"partials/mediaqueries",
+		"partials/modules",
+        "partials/base",
+        "partials/layout"
+;
