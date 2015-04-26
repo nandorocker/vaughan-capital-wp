@@ -41,19 +41,16 @@
 				</div>
 
 				<!-- Group all menu items to cllapse-->
-				<div class="collapse navbar-collapse" id="navbar">
-						<?php 
-						wp_nav_menu(
-							array( 
-								'container_class' => 'collapse navbar-collapse',
-								'container_id' => 'navbar',
-								'menu' => '',
-								'menu_class' => "nav navbar-nav navbar-right",
-								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-								)
-						);
-						?>
-				</div>
+				<?php 
+					wp_nav_menu(
+						array( 
+							'container_class' => 'collapse navbar-collapse',
+							'container_id' => 'navbar',
+							'menu_class' => "nav navbar-nav navbar-right",
+							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+							)
+					);
+				?>
 			</nav>
 		</header>
 
