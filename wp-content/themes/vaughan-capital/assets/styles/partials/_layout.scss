@@ -36,7 +36,7 @@
  * Home
  */
  .home {
-    background: url('../assets/images/home-bg-la.png') no-repeat center center fixed;
+    background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
     @include bg-cover;
 
     p {
