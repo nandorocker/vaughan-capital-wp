@@ -18,23 +18,41 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
 	<!--[if lt IE 9]>
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
+    <![endif]-->
 
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a>
+	<div id="page" class="hfeed site container">
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+		<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a> -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', '_mbbasetheme' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		<header id="masthead" class="site-header" role="banner">
+			<!-- Main Navigation-->
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt=
+						"Vaughan Capital Advisors" src=
+						"<?php bloginfo('stylesheet_directory'); ?>/assets/images/vaughan-logo.png"></a><button class=
+						"navbar-toggle collapsed" data-target="#navbar"
+						data-toggle="collapse" type="button"><span class=
+						"sr-only">Toggle navigation</span><span class=
+						"icon-bar"></span><span class=
+						"icon-bar"></span><span class="icon-bar"></span></button>
+				</div>
 
-	<div id="content" class="site-content">
+				<!-- Group all menu items to cllapse-->
+				<div class="collapse navbar-collapse" id="navbar">
+						<?php 
+						wp_nav_menu(
+							array( 
+								'theme_location' => 'primary',
+								'menu_class' => "nav navbar-nav navbar-right",
+								'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+								)
+						);
+						?>
+				</div>
+			</nav>
+		</header>
+
+		<div id="content" class="site-content">
