@@ -102,6 +102,8 @@ function _mbbasetheme_setup() {
 	// Function location: /lib/theme-functions.php
 	add_action( 'wp_enqueue_scripts', 'mb_scripts' );
 
+	// 
+
 	// Remove Query Strings From Static Resources
 	// Function location: /lib/theme-functions.php
 	add_filter( 'script_loader_src', 'mb_remove_script_version', 15, 1 );
@@ -110,6 +112,9 @@ function _mbbasetheme_setup() {
 	// Remove Read More Jump
 	// Function location: /lib/theme-functions.php
 	add_filter( 'the_content_more_link', 'mb_remove_more_jump_link' );
+
+	// Load Typekit
+	add_action( 'wp_head', 'theme_typekit_inline' );
 
 }
 endif; // _mbbasetheme_setup
