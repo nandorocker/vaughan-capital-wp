@@ -66,3 +66,10 @@
   -o-background-size: cover;
   background-size: cover;
 }
+
+// Clearfix
+@mixin clearfix {
+  clear: both;
+  display: block;
+  overflow: hidden;
+}
