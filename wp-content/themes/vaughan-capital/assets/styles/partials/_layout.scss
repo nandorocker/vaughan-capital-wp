@@ -100,9 +100,15 @@ article.page {
 }
 
 .header-image {
-    img {
-        width: 100%;
-    }
+    width: 100%;
+    height: $line-height-computed*16;
+    background-repeat: no-repeat;
+    background-origin: center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     margin-bottom: $line-height-computed*3;
 }
