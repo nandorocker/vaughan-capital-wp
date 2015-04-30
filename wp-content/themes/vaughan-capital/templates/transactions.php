@@ -8,14 +8,6 @@
  */
 
 get_header(); ?>
-<ul>
-<?php
-  query_posts( array('category_name' => 'transaction', 'posts_per_page' => -1 ));
-  if (have_posts()) : while ( have_posts() ) : the_post(); ?>
-  <li><?php the_title(); ?> </li>
-<?php endwhile; endif; 
-  wp_reset_query(); ?>
-</ul>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -30,16 +22,28 @@ get_header(); ?>
 						<h2>Category</h2>
 
 						<div class="transaction-set">
+						<?php
+
+							// Loop: list all the posts under category "transaction"
+							query_posts( array('category_name' => 'transaction', 'posts_per_page' => -1 ));
+							if (have_posts()) : while ( have_posts() ) : the_post(); 
+
+		  				?>
 							<article class="transaction-item">
 								<div class="transaction-img">Image</div>
 								<div class="transaction-descr">
-									<h3><?php //echo $transaction[$i][0] ?><br>
-									<em><?php //echo $transaction[$i][1] ?></em></h3>
+									<h3><?php the_title(); ?></h3>
+									<?php the_content(); ?>
 								</div>
-								<div class="transaction-value">
+<!-- 								<div class="transaction-value">
 									<h2><?php //echo $transaction[$i][2] ?></h2>
-								</div>
+								</div> -->
 							</article>
+
+				<?php
+					endwhile; endif; // End transaction post loop
+					wp_reset_query(); 
+				?>
 						</div>
 
 					</section>
