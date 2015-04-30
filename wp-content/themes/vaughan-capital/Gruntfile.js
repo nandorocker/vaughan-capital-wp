@@ -19,6 +19,9 @@ module.exports = function(grunt) {
             images: {
                 files: ['assets/images/**/*.{png,jpg,gif}'],
                 tasks: ['imagemin']
+            },
+            php: {
+                files: ['**/*.php']
             }
         },
 
@@ -126,10 +129,10 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src : ['style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}']
+                    src : ['style.css', 'assets/js/*.js', 'assets/images/**/*.{png,jpg,jpeg,gif,webp,svg}', '**/*.php']
                 },
                 options: {
-                    proxy: "http://localhost:8080",
+                    proxy: "127.0.0.1:8080",
                     watchTask: true
                 }
             }

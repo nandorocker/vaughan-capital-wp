@@ -79,3 +79,23 @@ add_filter( 'wpseo_metabox_prio', 'mb_filter_yoast_seo_metabox' );
 function mb_filter_yoast_seo_metabox() {
 	return 'low';
 }
+
+/****************************************
+Transactions page functions
+****************************************/
+
+/*
+ * Dynamic bootstrap row generator
+ */
+
+function addRowStart($item) {
+	if ($item == 0) {
+		echo "<div class='row'><!-- start bootstrap row -->\n";
+	}
+}
+
+function addRowEnd($item) {
+	if ($item == 2) {
+		echo "</div><!-- #row -->\n";
+	}
+}
