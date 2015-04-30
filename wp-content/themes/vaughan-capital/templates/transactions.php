@@ -26,6 +26,13 @@ get_header(); ?>
 
 							// Loop: list all the posts under category "transaction"
 							query_posts( array('category_name' => 'transaction', 'posts_per_page' => -1 ));
+							$args = array(
+								'category_name' => 'transaction',
+								'posts_per_page' => -1,
+								'order' => 'ASC'
+							);
+
+							query_posts( $args );
 							if (have_posts()) : while ( have_posts() ) : the_post(); 
 
 		  				?>
