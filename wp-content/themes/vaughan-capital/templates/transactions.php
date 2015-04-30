@@ -8,7 +8,6 @@
  */
 
 get_header(); ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -22,33 +21,46 @@ get_header(); ?>
 						<h2>Category</h2>
 
 						<div class="transaction-set">
-						<?php
+					<?php
 
-							// Loop: list all the posts under category "transaction"
-							$args = array(
-								'category_name' => 'transaction',
-								'posts_per_page' => -1,
-								'order' => 'ASC'
-							);
+						// Loop: list all the posts under category "transaction"
+						$args = array(
+							'category_name' => 'transaction',
+							'posts_per_page' => -1,
+							'order' => 'ASC'
+						);
 
-							query_posts( $args );
+						query_posts( $args );
 
-							if (have_posts()) : while ( have_posts() ) : the_post(); 
-						?>
-							<article class="transaction-item">
-								<div class="transaction-img">X</div>
-								<div class="transaction-descr">
-									<h3><?php the_title(); ?></h3>
-									<h4><em><?php the_field("role"); ?></em></h4>
-								</div>
-								<div class="transaction-value">
-									<h2><?php the_field("value"); ?></h2>
-								</div>
-							</article>
-				<?php
-					endwhile; endif; // End transaction post loop
-					wp_reset_query(); 
-				?>
+						if (have_posts()) : while ( have_posts() ) : the_post(); 
+
+							// Add bootstrap row dynamically
+							addRowStart($item_number);
+					?>
+								<article class="transaction-item">
+									<div class="transaction-img"></div>
+									<div class="transaction-descr">
+										<h3><?php the_title(); ?></h3>
+										<h4><em><?php the_field("role"); ?></em></h4>
+									</div>
+									<div class="transaction-value">
+										<h2><?php the_field("value"); ?></h2>
+									</div>
+								</article>
+					<?php
+							// End bootstrap row dynamically
+							addRowEnd($item_number);
+
+							// Progress bootstrap row generator
+							if ($item_number < 2) {
+								$item_number++;
+							} else {
+								$item_number = 0;
+							}
+
+						endwhile; endif; // End transaction post loop
+						wp_reset_query(); 
+					?>
 						</div>
 
 					</section>
