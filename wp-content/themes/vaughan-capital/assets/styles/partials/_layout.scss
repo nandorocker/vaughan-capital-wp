@@ -65,7 +65,13 @@
  * Internal Pages
  */
 .page {
+    .entry-header {
+        @include make-md-column(4);
+    }
 
+    .entry-content {
+        @include make-md-column(8);
+    }
 }
 
 .content-area {
@@ -74,6 +80,18 @@
     margin-bottom: $line-height-computed*3; 
     border-top: 2px solid $brand-secondary;
     border-bottom: 2px solid $brand-secondary;
+}
+
+/* Wordpress hack - override this on home (TODO: add unique ID for internal pages) */
+.home {
+    .content-area {
+        padding: 0;
+        margin: 0;
+        border: 0;
+    }
+    .entry-header, .entry-content {
+        @include make-md-column(12);
+    }
 }
 
 .header-image {
