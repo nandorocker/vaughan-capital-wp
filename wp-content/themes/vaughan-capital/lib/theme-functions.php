@@ -129,3 +129,24 @@ function theme_typekit_inline() {
   if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
   	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <?php } }
+
+
+/****************************************
+Transactions page functions
+****************************************/
+
+/*
+ * Dynamic bootstrap row generator
+ */
+
+function addRowStart($item) {
+	if ($item == 0) {
+		echo "<div class='row'><!-- start bootstrap row -->\n";
+	}
+}
+
+function addRowEnd($item) {
+	if ($item == 2) {
+		echo "</div><!-- #row -->\n";
+	}
+}
