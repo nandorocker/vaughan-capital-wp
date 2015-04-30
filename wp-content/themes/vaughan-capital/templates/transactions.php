@@ -25,7 +25,6 @@ get_header(); ?>
 						<?php
 
 							// Loop: list all the posts under category "transaction"
-							query_posts( array('category_name' => 'transaction', 'posts_per_page' => -1 ));
 							$args = array(
 								'category_name' => 'transaction',
 								'posts_per_page' => -1,
