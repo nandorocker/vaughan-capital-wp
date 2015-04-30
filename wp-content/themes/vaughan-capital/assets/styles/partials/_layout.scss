@@ -139,8 +139,13 @@ article.page {
     margin: $line-height-computed*3 0;
     color: $gray-darker;
 
-    section > h2 {
-        color: $white;
+    > section {
+        margin-top: $line-height-computed*5;
+
+        > h2 {
+            color: $white;
+            margin-bottom: $line-height-computed*2;
+        }
     }
 }
 

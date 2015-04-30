@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -17,21 +18,37 @@ get_header(); ?>
 
 				<div class="transactions">
 
-					<section>
-						<h2>Category</h2>
+				<?php
+					// get all categories
+					$cats = get_categories('child_of=3');
 
-						<div class="transaction-set">
-					<?php
+					// loop through categories
+					foreach($cats as $cat) {
+						// set item checker for bootstrap row generator
+						$item_number = 0;
 
-						// Loop: list all the posts under category "transaction"
+						// setup the category ID
+	                    $cat_id = $cat->term_id;
+
+	                    // Make a header for the category
+	                    ?><section>
+						<h2><?php echo $cat->name; ?></h2>
+
+						<div class="transaction-set"><?php
+
+						// Create a custom wordpress query
 						$args = array(
-							'category_name' => 'transaction',
+
+							'cat' => $cat_id,
 							'posts_per_page' => -1,
-							'order' => 'ASC'
+							'order' => 'DESC',
+							'orderby' => 'date',
+							'exclude' => 3
 						);
 
 						query_posts( $args );
 
+						// Start wordpress loop!
 						if (have_posts()) : while ( have_posts() ) : the_post(); 
 
 							// Add bootstrap row dynamically
@@ -59,12 +76,15 @@ get_header(); ?>
 							}
 
 						endwhile; endif; // End transaction post loop
-						wp_reset_query(); 
-					?>
+						wp_reset_query(); // End category loop query
+
+						?>
 						</div>
-
 					</section>
+						<?php
 
+					} // End category foreach
+				?>
 				</div>
 			<?php endwhile; // end of the loop. ?>
 
