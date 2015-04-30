@@ -133,7 +133,7 @@ article.page {
 /*
  * Transactions Page
  */
-
+// Lots of clearfixes because float: left town
 .transactions {
     @include clearfix;
     margin: $line-height-computed*3 0;
@@ -145,6 +145,8 @@ article.page {
 }
 
 .transaction-set {
+    @include clearfix;
+    background-color: #efefef;
     // .transaction-item:nth-child(4n+0) {
     //     @include make-row;
     // }
@@ -156,6 +158,13 @@ article.page {
     height: 30em;
     background-color: #fff;
     text-align: center;
+    overflow: hidden;
+    border-right: 1px solid $gray-lighterer;
+    border-bottom: 1px solid $gray-lighterer;
+
+    &:last-child {
+        border-right: none !important;
+    }
 
     h2, h3, h4 {
         font-weight: normal;
@@ -166,12 +175,22 @@ article.page {
         color: #5B7491;
     }
 
-    .transaction-img {
-        width: 80%;
-        height: 40%;
-        margin: 0 auto;
-        background-color: $gray-light;
+    h4 {
+        em {
+            color: $gray-light;
+        }
     }
+}
+
+.transaction-img {
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    background-color: $gray-light;
+}
+
+.transaction-descr {
+    height: 7em;
 }
 
 /*
