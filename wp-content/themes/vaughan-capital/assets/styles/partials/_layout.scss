@@ -104,6 +104,8 @@ article.page {
     height: $line-height-computed*16;
     background-repeat: no-repeat;
     background-origin: center;
+    // background-attachment: fixed;
+    background-position: center;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
