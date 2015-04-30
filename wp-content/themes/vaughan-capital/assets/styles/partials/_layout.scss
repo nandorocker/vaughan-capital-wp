@@ -147,13 +147,10 @@ article.page {
 .transaction-set {
     @include clearfix;
     background-color: #efefef;
-    // .transaction-item:nth-child(4n+0) {
-    //     @include make-row;
-    // }
 }
 
 .transaction-item {
-    @include make-sm-column(4, 1px);
+    @include make-sm-column(4);
     padding: 2em;
     height: 30em;
     background-color: #fff;
