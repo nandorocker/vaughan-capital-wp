@@ -75,6 +75,10 @@
     }
 }
 
+article.page {
+    @include clearfix;
+}
+
 .content-area {
     @include clearfix;
     padding: $line-height-computed*3 0; 
@@ -126,7 +130,49 @@
     }
 }
 
+/*
+ * Transactions Page
+ */
 
+.transactions {
+    @include clearfix;
+    margin: $line-height-computed*3 0;
+    color: $gray-darker;
+
+    section > h2 {
+        color: $white;
+    }
+}
+
+.transaction-set {
+    // .transaction-item:nth-child(4n+0) {
+    //     @include make-row;
+    // }
+}
+
+.transaction-item {
+    @include make-sm-column(4, 1px);
+    padding: 2em;
+    height: 30em;
+    background-color: #fff;
+    text-align: center;
+
+    h2, h3, h4 {
+        font-weight: normal;
+    }
+
+    h2 {
+        margin-top: $line-height-computed;
+        color: #5B7491;
+    }
+
+    .transaction-img {
+        width: 80%;
+        height: 40%;
+        margin: 0 auto;
+        background-color: $gray-light;
+    }
+}
 
 /*
  * Contact page
