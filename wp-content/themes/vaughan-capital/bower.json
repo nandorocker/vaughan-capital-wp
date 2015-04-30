@@ -1,0 +1,19 @@
+{
+  "name": "vaughan-capital",
+  "version": "1.0.0",
+  "homepage": "http://www.vcapadvisors.com",
+  "authors": [
+    "nando@23divide.com"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "~3.3.4"
+  }
+}
