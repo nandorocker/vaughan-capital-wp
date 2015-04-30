@@ -88,9 +88,6 @@ Transactions page functions
  * Dynamic bootstrap row generator
  */
 
-// set checker
-$item_number = 0;
-
 function addRowStart($item) {
 	if ($item == 0) {
 		echo "<div class='row'><!-- start bootstrap row -->\n";
