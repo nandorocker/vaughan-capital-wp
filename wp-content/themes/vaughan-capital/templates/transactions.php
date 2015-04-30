@@ -32,20 +32,19 @@ get_header(); ?>
 							);
 
 							query_posts( $args );
-							if (have_posts()) : while ( have_posts() ) : the_post(); 
 
-		  				?>
+							if (have_posts()) : while ( have_posts() ) : the_post(); 
+						?>
 							<article class="transaction-item">
-								<div class="transaction-img">Image</div>
+								<div class="transaction-img">X</div>
 								<div class="transaction-descr">
-									<h3><?php the_title(); ?><br>
-									<em><?php the_field("role"); ?></em></h3>
+									<h3><?php the_title(); ?></h3>
+									<h4><em><?php the_field("role"); ?></em></h4>
 								</div>
 								<div class="transaction-value">
 									<h2><?php the_field("value"); ?></h2>
 								</div>
 							</article>
-
 				<?php
 					endwhile; endif; // End transaction post loop
 					wp_reset_query(); 
