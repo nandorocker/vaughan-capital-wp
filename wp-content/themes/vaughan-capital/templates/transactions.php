@@ -8,6 +8,14 @@
  */
 
 get_header(); ?>
+<ul>
+<?php
+  query_posts( array('category_name' => 'transaction', 'posts_per_page' => -1 ));
+  if (have_posts()) : while ( have_posts() ) : the_post(); ?>
+  <li><?php the_title(); ?> </li>
+<?php endwhile; endif; 
+  wp_reset_query(); ?>
+</ul>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -17,33 +25,26 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<div class="transactions">
+
 					<section>
-						<h2>Digital Media</h2>
+						<h2>Category</h2>
 
-						<article class="transaction-item">
-							<span>Image</span>
-							<h1>Double Encore acquired by Possible</h1>
-							<h3>Exclusive Sell-Side Advisor</h3>
-							<h2>Private</h2>
-						</article>
-
-						<article class="transaction-item">
-							<span>Image</span>
-							<h1>Testflight acquired by Apple</h1>
-							<h3>Advisor to Founder</h3>
-							<h2>Private</h2>
-						</article>
-
-						<article class="transaction-item">
-							<span>Image</span>
-							<h1>Bell Canada share buyback from SBC</h1>
-							<h3>Exclusive Buy-Side Advisor</h3>
-							<h2>$5 Million</h2>
-						</article>
+						<div class="transaction-set">
+							<article class="transaction-item">
+								<div class="transaction-img">Image</div>
+								<div class="transaction-descr">
+									<h3><?php //echo $transaction[$i][0] ?><br>
+									<em><?php //echo $transaction[$i][1] ?></em></h3>
+								</div>
+								<div class="transaction-value">
+									<h2><?php //echo $transaction[$i][2] ?></h2>
+								</div>
+							</article>
+						</div>
 
 					</section>
-				</div>
 
+				</div>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
