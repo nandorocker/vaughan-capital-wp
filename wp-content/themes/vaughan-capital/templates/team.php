@@ -33,9 +33,9 @@ while ( have_posts() ) : the_post(); // begin current page loop
 
 		'cat' => 9,
 		'posts_per_page' => -1,
-		'order' => 'DESC',
-		'orderby' => 'date',
-		'exclude' => 3
+		'meta_key' => 'order',
+		'orderby' => 'meta_value_num',
+		'order' => 'ASC'
 	);
 
 	query_posts( $args );
