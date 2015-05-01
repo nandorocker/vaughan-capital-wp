@@ -31,7 +31,7 @@ while ( have_posts() ) : the_post(); // begin current page loop
 	// Create a custom wordpress query
 	$args = array(
 
-		'cat' => 9,
+		'category_name' => 'team',
 		'posts_per_page' => -1,
 		'meta_key' => 'order',
 		'orderby' => 'meta_value_num',
