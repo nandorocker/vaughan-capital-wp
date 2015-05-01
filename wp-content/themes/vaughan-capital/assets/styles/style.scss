@@ -99,8 +99,8 @@ $headings-color:          inherit !default;
 // Navbar
 $navbar-default-bg:		  transparent !default;
 $navbar-default-link-color:                #fff !default;
-$navbar-default-link-hover-color:          #5DB3E7 !default;
-$navbar-default-link-hover-bg:             transparent !default;
+$navbar-default-link-hover-color:          $link-hover-color;
+$navbar-default-link-hover-bg:             transparent;
 $navbar-default-link-active-color:         #555 !default;
 $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;

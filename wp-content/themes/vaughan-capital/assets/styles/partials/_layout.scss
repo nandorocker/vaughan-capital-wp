@@ -16,10 +16,24 @@
     font-size: .8em;
 
     /* Override Bootstrap's navigation margins so it can left-align with page */
-    > li > a {
+    > li > a, .current_page_item {
         padding-right: $line-height-computed;
         padding-left: $line-height-computed*0.25;
     }
+
+    /* Removes BS's pill background */
+
+    > li > a:hover {
+            background-color: transparent;
+    }
+}
+
+// Make current menu item different
+.current_page_item {
+    color: $brand-primary;
+    padding-top:    14px;
+    padding-bottom: 14px;
+    line-height: $line-height-computed;
 }
 
 .navbar {
