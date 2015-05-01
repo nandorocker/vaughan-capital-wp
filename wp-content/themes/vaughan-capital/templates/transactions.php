@@ -42,8 +42,7 @@ get_header(); ?>
 							'cat' => $cat_id,
 							'posts_per_page' => -1,
 							'order' => 'DESC',
-							'orderby' => 'date',
-							'exclude' => 3
+							'orderby' => 'date'
 						);
 
 						query_posts( $args );
