@@ -241,6 +241,7 @@ article.page {
 footer {
     &.site-footer {
         margin-top: $line-height-computed*3;
+        margin-bottom: $line-height-computed*4;
 
         p {
             font-size: $font-size-small;
