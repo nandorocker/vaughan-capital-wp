@@ -23,3 +23,5 @@
 - Visit `Godaddy > Hosting > Hosted Domains`
 - Move the `vcapadvisors.com` entry to `/vcapadvisors`
 - Remove the `vaughan.nan.do` entry
+- Visit `WP Admin > Settings > General`
+- Change both the `Wordpress Address (URL)` and `Site Address (URL)` to `http://vcapadvisors.com`
