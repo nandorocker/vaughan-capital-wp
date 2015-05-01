@@ -73,7 +73,8 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'assets/js/source/**/*.js'
+                'assets/js/source/**/*.js',
+                'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
             ]
         },
 
@@ -103,6 +104,9 @@ module.exports = function(grunt) {
                 files: {
                     'assets/js/main.min.js': [
                         'assets/js/source/main.js'
+                    ],
+                    'assets/js/vendor/bootstrap.min.js': [
+                        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
                     ]
                 }
             }
