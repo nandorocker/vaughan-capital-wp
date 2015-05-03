@@ -15,5 +15,8 @@
   ],
   "dependencies": {
     "bootstrap-sass": "~3.3.4"
+  },
+  "devDependencies": {
+    "jquery-backstretch": "~2.0.4"
   }
 }
