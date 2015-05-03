@@ -16,7 +16,7 @@
     font-size: .8em;
 
     /* Override Bootstrap's navigation margins so it can left-align with page */
-    > li > a, .current_page_item {
+    > li > a {
         padding-right: $line-height-computed;
         padding-left: $line-height-computed*0.25;
     }
@@ -26,14 +26,6 @@
     > li > a:hover {
             background-color: transparent;
     }
-}
-
-// Make current menu item different
-.current_page_item {
-    color: $brand-primary;
-    padding-top:    14px;
-    padding-bottom: 14px;
-    line-height: $line-height-computed;
 }
 
 .navbar {

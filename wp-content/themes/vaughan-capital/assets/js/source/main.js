@@ -2,9 +2,6 @@
 	var t_dir = SiteParameters.theme_directory;
 	// alert(SiteParameters);
 
-	// Remove link from current item
-	$(".current_page_item").children().contents().unwrap();
-
 	/*
 	 * Backstretch slideshow
 	 */
