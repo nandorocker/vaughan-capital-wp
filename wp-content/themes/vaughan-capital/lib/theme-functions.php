@@ -162,3 +162,12 @@ function addRowEnd($item) {
 		echo "</div><!-- #row -->\n";
 	}
 }
+
+function addPostImage($post) {
+	if ( has_post_thumbnail() ) {
+		$post_thumbnail_id = get_post_thumbnail_id($post->ID);
+		$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
+
+		echo "<img src='" . $post_thumbnail_url . "'>";
+	}
+}
