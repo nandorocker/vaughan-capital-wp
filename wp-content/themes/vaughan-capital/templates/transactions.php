@@ -54,7 +54,7 @@ get_header(); ?>
 							addRowStart($item_number);
 					?>
 								<article class="transaction-item">
-									<div class="transaction-img"></div>
+									<figure class="transaction-img"><?php addPostImage($post); ?></figure>
 									<div class="transaction-descr">
 										<h3><?php the_title(); ?></h3>
 										<h4><em><?php the_field("role"); ?></em></h4>
