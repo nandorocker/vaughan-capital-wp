@@ -269,4 +269,8 @@ footer {
     .navbar, footer.site-footer {
         border: 0;
     }
+
+    #primary {
+        @include container-fixed();
+    }
 }
