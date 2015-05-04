@@ -69,20 +69,9 @@ article.page {
     margin-bottom: $line-height-computed*3; 
 }
 
-/* Wordpress hack - override header & content area attributes on home (TODO: add unique ID for internal pages) */
-.home {
-    .content-area {
-        padding: 0;
-        margin: 0;
-        border: 0;
-    }
-    .entry-header, .entry-content {
-        @include make-md-column(12);
-    }
-}
-
 .header-image {
-    width: 100%;
+    @include make-md-column(12);
+    // width: 100%;
     height: $line-height-computed*16;
     background-repeat: no-repeat;
     background-origin: center;
@@ -252,6 +241,15 @@ footer {
     background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
     @include bg-cover;
 
+    // .content-area {
+    //     padding: 0;
+    //     margin: 0;
+    //     border: 0;
+    // }
+    .entry-header, .entry-content {
+        @include make-md-column(12);
+    }
+
     p {
         margin: 0;
     }
@@ -269,8 +267,16 @@ footer {
     .navbar, footer.site-footer {
         border: 0;
     }
-
-    #primary {
-        @include container-fixed();
-    }
 }
+
+// #content {
+//     @include container-fixed();
+// }
+
+// #primary {
+//     @include make-row();
+// }
+
+// #main {
+//     @include make-md-column(12);
+// }
