@@ -22,11 +22,11 @@
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<div id="page" class="hfeed site container">
+	<div id="page" class="hfeed site">
 
 		<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a> -->
 
-		<header id="masthead" class="site-header" role="banner">
+		<header id="masthead" class="site-header container" role="banner">
 			<!-- Main Navigation-->
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">

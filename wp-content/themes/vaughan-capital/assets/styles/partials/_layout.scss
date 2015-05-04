@@ -29,12 +29,12 @@
 }
 
 .navbar {
-    margin: $line-height-computed*3 0;
+    padding: $line-height-computed*3 0;
+    border-bottom: 2px solid $brand-secondary;
 }
 
 .navbar-default {
     background-color: transparent;
-    border: 0;
 }
 
 
@@ -89,8 +89,6 @@ article.page {
     @include clearfix;
     padding: $line-height-computed*3 0; 
     margin-bottom: $line-height-computed*3; 
-    border-top: 2px solid $brand-secondary;
-    border-bottom: 2px solid $brand-secondary;
 }
 
 /* Wordpress hack - override header & content area attributes on home (TODO: add unique ID for internal pages) */
@@ -110,7 +108,6 @@ article.page {
     height: $line-height-computed*16;
     background-repeat: no-repeat;
     background-origin: center;
-    // background-attachment: fixed;
     background-position: center;
 
     -webkit-background-size: cover;
@@ -147,9 +144,7 @@ article.page {
 /*
  * Transactions Page
  */
-// Lots of clearfixes because float: left town
 .transactions {
-    @include clearfix;
     margin: $line-height-computed*3 0;
     color: $gray-darker;
 
@@ -157,14 +152,12 @@ article.page {
         margin-top: $line-height-computed*5;
 
         > h2 {
-            color: $white;
             margin-bottom: $line-height-computed*2;
         }
     }
 }
 
 .transaction-set {
-    @include clearfix;
     background-color: #efefef;
 }
 
@@ -199,9 +192,6 @@ article.page {
 
 .transaction-img {
     @include make-row();
-    width: 100%;
-    height: $line-height-computed*8;
-    overflow: hidden;
     margin: 0 auto;
     box-shadow: 0 1.5px 10px rgba(20,20,20,0.2);
     
@@ -253,8 +243,9 @@ article.page {
  */
 footer {
     &.site-footer {
-        margin-top: $line-height-computed*3;
-        margin-bottom: $line-height-computed*4;
+        padding-top: $line-height-computed*3;
+        padding-bottom: $line-height-computed*4;
+        border-top: 2px solid $brand-secondary;
 
         p {
             font-size: $font-size-small;
