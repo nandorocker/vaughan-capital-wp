@@ -37,28 +37,6 @@
     background-color: transparent;
 }
 
-
-/*
- * Home
- */
- .home {
-    background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
-    @include bg-cover;
-
-    p {
-        margin: 0;
-    }
-
-    .site-main {
-        min-height: 50vh;
-        padding: $line-height-computed*3 0 $line-height-computed*6 0;
-    }
-
-    .entry-title {
-        display: none;
-    }
-}
-
 @include md {
 	h2.sidebar-line {
 		display: inline-block;
@@ -253,6 +231,7 @@ footer {
         }
     }
 
+    // Exceptions for home section
     .home &.site-footer {
         p {
             color: $white;
@@ -261,5 +240,33 @@ footer {
 
     .disclaimer {
         margin-top: $line-height-computed*0.8;
+    }
+}
+
+
+
+/*
+ * Home
+ */
+ .home {
+    background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
+    @include bg-cover;
+
+    p {
+        margin: 0;
+    }
+
+    .site-main {
+        min-height: 50vh;
+        padding: $line-height-computed*3 0 $line-height-computed*6 0;
+    }
+
+    .entry-title {
+        display: none;
+    }
+
+    // Overrides borders from header & footer on home
+    .navbar, footer.site-footer {
+        border: 0;
     }
 }
