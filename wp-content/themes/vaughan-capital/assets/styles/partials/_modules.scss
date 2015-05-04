@@ -67,14 +67,6 @@
   background-size: cover;
 }
 
-// Clearfix
-@mixin clearfix {
-  position: relative;
-  clear: both;
-  display: block;
-  overflow: hidden;
-}
-
 .clearfix {
   @include clearfix;
 }
