@@ -1,19 +1,19 @@
 <?php
 /**
- * Template Name: Portfolio Page
+ * Template Name: Home page
  *
- * Displays content for portfolio page layouts
+ * Displays content for Home
  *
  * @package _mbbasetheme
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area container">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
-
+				 
 				<?php get_template_part( 'content', 'page' ); ?>
 
 				<?php
@@ -28,5 +28,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php //get_sidebar(); ?>
 <?php get_footer(); ?>

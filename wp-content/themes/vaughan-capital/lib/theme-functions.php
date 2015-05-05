@@ -171,3 +171,6 @@ function addPostImage($post) {
 		echo "<img src='" . $post_thumbnail_url . "'>";
 	}
 }
+
+// Debug mode
+// @include "debug.php";

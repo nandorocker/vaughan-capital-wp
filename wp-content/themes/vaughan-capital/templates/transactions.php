@@ -14,9 +14,13 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+				<!-- Intro Section -->
+				<div id="intro" class="container">
 				<?php get_template_part( 'content', 'page' ); ?>
+				</div>
 
-				<div class="transactions">
+				<!-- Transactions Section -->
+				<div class="transactions jumbotron">
 
 				<?php
 					// get all categories
@@ -31,10 +35,12 @@ get_header(); ?>
 	                    $cat_id = $cat->term_id;
 
 	                    // Make a header for the category
-	                    ?><section>
-						<h2><?php echo $cat->name; ?></h2>
+	                    ?><!-- Transaction Set (end-to-end) -->
+	                    <section class="container">
 
-						<div class="transaction-set"><?php
+							<h2><?php echo $cat->name; ?></h2>
+							
+							<div class="transaction-set"><?php
 
 						// Create a custom wordpress query
 						$args = array(
@@ -78,13 +84,13 @@ get_header(); ?>
 						wp_reset_query(); // End category loop query
 
 						?>
-						</div>
+						</div><!-- transaction-set -->
 					</section>
 						<?php
 
 					} // End category foreach
 				?>
-				</div>
+				</div></div>
 			<?php endwhile; // end of the loop. ?>
 
 		</main><!-- #main -->
