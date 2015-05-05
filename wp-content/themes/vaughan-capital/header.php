@@ -22,19 +22,25 @@
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<ul id="menu">
-		<li><a href="#">item 1</a></li>
-		<li><a href="#">item 2</a></li>
-		<li><a href="#">item 3</a></li>
-		<li><a href="#">item 4</a></li>
-	</ul>
-
 	<div id="page" class="hfeed site">
 
 		<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a> -->
 
-		<!-- <header id="masthead" class="site-header container" role="banner"> -->
-			<!-- Main Navigation-->
-		<!-- </header> -->
+		<header id="masthead" class="navbar site-header container" role="banner">
+			<!-- Brand -->
+			<div class="navbar-header">
+				<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="Vaughan Capital Advisors" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/vaughan-logo.png"></a>
+			</div>
+
+			<!-- Main Navigation--><?php 
+wp_nav_menu(
+	array( 
+		'container_class' => '',									// applies to div
+		'container_id' => 'menu',									// applies to ul
+		'menu_class' => 'nav navbar-nav navbar-right',				// applies to ul
+		'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+		)
+);
+?>		</header>
 
 		<div id="content" class="site-content">

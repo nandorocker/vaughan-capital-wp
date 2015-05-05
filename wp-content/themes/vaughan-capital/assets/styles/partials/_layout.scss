@@ -37,12 +37,17 @@
     background-color: transparent;
 }
 
-@include md {
-	h2.sidebar-line {
-		display: inline-block;
-		padding-bottom: 2em;
-		border-bottom: 4px solid $brand-secondary;
-	}
+// Slicknav menu: show inline menu on mobile
+#menu {
+    display: none;
+}
+
+.slicknav_menu {
+    display: block;
+}
+
+.navbar-brand {
+    display: none;
 }
 
 /*
@@ -269,14 +274,37 @@ footer {
     }
 }
 
-// #content {
-//     @include container-fixed();
-// }
+/*
+ * Media Queries
+ * -------------
+ * See _mediaqueries.scss for details
+ */
 
-// #primary {
-//     @include make-row();
-// }
+// Medium 
+@include md {
 
-// #main {
-//     @include make-md-column(12);
-// }
+    // Underline on sidebar title
+    h2.sidebar-line {
+        display: inline-block;
+        padding-bottom: 2em;
+        border-bottom: 4px solid $brand-secondary;
+    }
+
+    /*
+     * Navigation
+     */ 
+
+    // On larger screens, hide slicknav and show inline menu
+    #menu {
+        display: block;
+
+    }
+
+    .slicknav_menu {
+        display: none;
+    }
+
+    .navbar-brand {
+        display: block;
+    }
+}
