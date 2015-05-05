@@ -28,30 +28,7 @@
 
 		<header id="masthead" class="site-header container" role="banner">
 			<!-- Main Navigation-->
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt=
-						"Vaughan Capital Advisors" src=
-						"<?php bloginfo('stylesheet_directory'); ?>/assets/images/vaughan-logo.png"></a><button class=
-						"navbar-toggle collapsed" data-target="#navbar"
-						data-toggle="collapse" type="button"><span class=
-						"sr-only">Toggle navigation</span><span class=
-						"icon-bar"></span><span class=
-						"icon-bar"></span><span class="icon-bar"></span></button>
-				</div>
-
-				<!-- Group all menu items to cllapse-->
-				<?php 
-					wp_nav_menu(
-						array( 
-							'container_class' => 'collapse navbar-collapse',
-							'container_id' => 'navbar',
-							'menu_class' => "nav navbar-nav navbar-right",
-							'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
-							)
-					);
-				?>
-			</nav>
+			
 		</header>
 
 		<div id="content" class="site-content">

@@ -17,6 +17,7 @@
     "bootstrap-sass": "~3.3.4"
   },
   "devDependencies": {
-    "jquery-backstretch": "~2.0.4"
+    "jquery-backstretch": "~2.0.4",
+    "slicknav": "~1.0.3"
   }
 }
