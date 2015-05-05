@@ -120,6 +120,7 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 		"partials/bootstrap",
+		"../../bower_components/slicknav/scss/slicknav",
 		"partials/mediaqueries",
 		"partials/modules",
         "partials/base",

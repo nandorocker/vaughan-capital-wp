@@ -76,6 +76,7 @@ module.exports = function(grunt) {
                 'Gruntfile.js',
                 'assets/js/source/**/*.js',
                 'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
+                'bower_components/slicknav/jquery.slicknav.js',
                 'bower_components/jquery-backstretch/jquery.backstretch.js'
             ]
         },
@@ -92,7 +93,7 @@ module.exports = function(grunt) {
                     'assets/js/plugins.min.js': [
                         'assets/js/source/plugins.js',
                         'assets/js/vendor/navigation.js',
-                        'assets/js/vendor/skip-link-focus-fix.js',
+                        'assets/js/vendor/skip-link-focus-fix.js'
                         // 'assets/js/vendor/yourplugin/yourplugin.js',
                     ]
                 }
@@ -116,6 +117,11 @@ module.exports = function(grunt) {
                     // Backstretch
                     'assets/js/vendor/jquery.backstretch.min.js': [
                         'bower_components/jquery-backstretch/jquery.backstretch.js'
+                    ],
+
+                    // Slicknav
+                    'assets/js/vendor/jquery.slicknav.min.js': [
+                        'bower_components/slicknav/jquery.slicknav.js',
                     ]
                 }
             }
