@@ -22,13 +22,19 @@
 	    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
+	<ul id="menu">
+		<li><a href="#">item 1</a></li>
+		<li><a href="#">item 2</a></li>
+		<li><a href="#">item 3</a></li>
+		<li><a href="#">item 4</a></li>
+	</ul>
+
 	<div id="page" class="hfeed site">
 
 		<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a> -->
 
-		<header id="masthead" class="site-header container" role="banner">
+		<!-- <header id="masthead" class="site-header container" role="banner"> -->
 			<!-- Main Navigation-->
-			
-		</header>
+		<!-- </header> -->
 
 		<div id="content" class="site-content">
