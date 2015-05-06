@@ -296,16 +296,7 @@ article.page {
 
 // Medium 
 @include md {
-
-    // Underline on sidebar title
-    .page {
-        .sidebar-line {
-            display: inline-block;
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-    }
-    
+   
     /*
      * Navigation
      */ 
@@ -332,6 +323,23 @@ article.page {
     /*
      * Content
      */
+
+    // Underline on sidebar title
+    .page {
+        .sidebar-line {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    // Hide from home (overriden by page because .home is also .page)
+    .home {
+        .sidebar-line {
+            display: none;
+        }
+    }
+
     .content-area {
         padding: $line-height-computed*3 0; 
     }
