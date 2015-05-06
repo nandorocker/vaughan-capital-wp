@@ -16,7 +16,7 @@
 			<?php 
 				wp_nav_menu(
 					array( 
-						'container_class' => 'col-sm-12 col-md-8 col-lg-6',
+						'container_class' => 'col-sm-12 col-md-8',
 						'container_id' => 'nav_footer',
 						'menu_class' => "nav navbar-nav",
 						'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
@@ -24,7 +24,22 @@
 				);
 			?>
 
-			<p class="col-sm-12 col-md-4 col-lg-6 disclaimer">&copy; <?php echo date( "Y" ); echo " "; bloginfo( 'name' ); ?>. Securities offered through Independent Investment Bankers Corp. a broker-dealer, Members FINRA/SIPC. Vaughan Capital Advisors, LLC is not affiliated with Independent Investment Bankers Corp.</p>
+			<div class="col-sm-12 col-md-4 disclaimer"><?php
+// Begin legal footer query
+query_posts('p=246');
+
+	if (have_posts()) : while ( have_posts() ) : the_post();
+		
+		// Display footer
+		the_field("legal_footer");
+		// the_title();
+	
+		endwhile;
+	endif;
+
+// End legal footer query
+wp_reset_query()
+?>			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

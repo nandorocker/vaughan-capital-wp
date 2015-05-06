@@ -231,11 +231,14 @@ article.page {
     text-align: center;
 
     p {
+        margin: 0;
         font-size: $font-size-small;
+        font-style: italic;
         color: $gray-light;
     }
 }
 
+// Legal disclaimer text
 .disclaimer {
     margin-top: $line-height-computed*0.8;
 }
@@ -271,12 +274,9 @@ article.page {
         border: 0;
     }
 
-    // Footer
-    .site-footer {
-        p {
-            font-size: $font-size-base;
-            color: $white;
-        }
+    // Make home footer text white
+    .site-footer p {
+        color: $white;
     }
 
 }
