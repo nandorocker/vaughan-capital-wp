@@ -181,8 +181,7 @@ module.exports = function(grunt) {
 
     // register task
     grunt.registerTask('default', ['serve']);
-    grunt.registerTask('dev', ['sass', 'autoprefixer']);
     grunt.registerTask('build', ['sass', 'autoprefixer', 'cssmin', 'uglify']);
-    grunt.registerTask('serve', ['dev', 'browserSync', 'watch']);
+    grunt.registerTask('serve', ['build', 'browserSync', 'watch']);
 
 };
