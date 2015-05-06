@@ -26,7 +26,9 @@
 
 			<div class="col-sm-12 col-md-4 disclaimer"><?php
 // Begin legal footer query
-query_posts('p=246');
+// $args = 'p=246'; // Use this for local setup without slug
+$args = 'name=legal';
+query_posts($args);
 
 	if (have_posts()) : while ( have_posts() ) : the_post();
 		
