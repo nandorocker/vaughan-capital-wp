@@ -258,8 +258,12 @@ article.page {
     background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
     @include bg-cover;
 
-    .entry-header, .entry-content {
+    .entry-content {
         @include make-md-column(12);
+
+        p {
+            font-size: $font-size-large;
+        }
     }
 
     p {
@@ -271,7 +275,7 @@ article.page {
         padding: $line-height-computed*6 0 $line-height-computed*6 0;
     }
 
-    .entry-title {
+    .entry-header {
         display: none;
     }
 
