@@ -20,6 +20,12 @@
     > li > a:hover {
             background-color: transparent;
     }
+
+    // Make footer text smaller
+    .site-footer & {
+        display: block;
+        text-transform: none;
+    }
 }
 
 .navbar-default {
@@ -224,7 +230,7 @@ article.page {
 }
 
 .site-footer {
-    background-color: $gray-dark;
+    background-color: $gray-darker;
     padding-top: $line-height-computed*3;
     padding-bottom: $line-height-computed*4;
     border-top: 2px solid $brand-secondary;
@@ -269,7 +275,7 @@ article.page {
         display: none;
     }
 
-    // Overrides borders from header & footer on home
+    // Don't display borders from header & footer on home
     .navbar, footer.site-footer {
         border: 0;
     }
