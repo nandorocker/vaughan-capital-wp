@@ -31,7 +31,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-darker:            #2c2c2c !default;//lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
@@ -52,7 +52,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #2C2C2C !default;
+$body-bg:               $gray-darker !default; //#2C2C2C !default;
 //** Global text color on `<body>`.
 $text-color:            #fff !default;
 
@@ -116,6 +116,8 @@ $jumbotron-bg:                   #fff !default;
 $jumbotron-heading-color:        inherit !default;
 $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 
+
+$color_bg: #fff;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

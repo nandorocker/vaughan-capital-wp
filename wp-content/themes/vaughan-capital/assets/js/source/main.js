@@ -15,6 +15,9 @@
 	/*
 	 * Slicknav
 	 */
-	 $('#menu').slicknav();
+	$('#menu').slicknav({
+		label: 'Vaughan Capital Advisors',
+		closeOnClick: true
+	});
 
 })(jQuery);

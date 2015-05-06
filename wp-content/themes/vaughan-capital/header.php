@@ -24,7 +24,7 @@
 
 	<div id="page" class="hfeed site">
 
-		<header id="masthead" class="navbar site-header container" role="banner">
+		<header id="masthead" class="navbar site-header container navbar-static-top" role="banner">
 			<!-- Brand -->
 			<div class="navbar-header">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img alt="Vaughan Capital Advisors" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/vaughan-logo.png"></a>
@@ -35,7 +35,7 @@ wp_nav_menu(
 	array( 
 		'container_class' => '',									// applies to div
 		'container_id' => 'menu',									// applies to ul
-		'menu_class' => 'nav navbar-nav navbar-right',				// applies to ul
+		'menu_class' => 'nav navbar-nav navbar-right', // applies to ul
 		'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>'
 		)
 );
