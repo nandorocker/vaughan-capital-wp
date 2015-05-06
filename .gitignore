@@ -23,4 +23,6 @@ wp-content/themes/vaughan-capital/assets/styles/build
 wp-content/themes/vaughan-capital/assets/js/main.min.*
 wp-content/themes/vaughan-capital/assets/js/plugins.min.*
 wp-content/themes/vaughan-capital/assets/js/vendor/bootstrap.*
+wp-content/themes/vaughan-capital/assets/js/vendor/jquery.backstretch.*
+wp-content/themes/vaughan-capital/assets/js/vendor/jquery.slicknav.*
 wp-content/themes/vaughan-capital/style.css

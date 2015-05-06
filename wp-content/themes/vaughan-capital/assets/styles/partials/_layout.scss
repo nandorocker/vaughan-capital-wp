@@ -13,36 +13,45 @@
 .nav {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: .8em;
+    font-size: 1.3rem;
 
     /* Override Bootstrap's navigation margins so it can left-align with page */
-    > li > a {
-        padding-right: $line-height-computed;
-        padding-left: $line-height-computed*0.25;
+    > li {
+
+        > a {
+            padding-right: $line-height-computed;
+            padding-left: $line-height-computed*0.25;
+        }
     }
 
     /* Removes BS's pill background */
-
     > li > a:hover {
             background-color: transparent;
     }
-}
-
-.navbar {
-    padding: $line-height-computed*3 0;
-    border-bottom: 2px solid $brand-secondary;
 }
 
 .navbar-default {
     background-color: transparent;
 }
 
-@include md {
-	h2.sidebar-line {
-		display: inline-block;
-		padding-bottom: 2em;
-		border-bottom: 4px solid $brand-secondary;
-	}
+// Slicknav
+//
+// menu: show inline menu on mobile
+#menu, #masthead {
+    display: none;
+}
+
+.slicknav_menu {
+    display: block;
+    background-color: transparent !important;
+}
+
+.navbar-brand {
+    display: none;
+}
+
+.slicknav_btn {
+    background: none;
 }
 
 /*
@@ -57,6 +66,13 @@
     .entry-content {
         @include make-md-column(8);
     }
+
+    .sidebar-line {
+        margin-top: $line-height-computed*3;
+        margin-bottom: $line-height-computed*4;
+        padding-bottom: 1.2em;
+        border-bottom: 4px solid $brand-secondary;
+    }
 }
 
 article.page {
@@ -65,8 +81,8 @@ article.page {
 
 .content-area {
     @include clearfix;
-    padding: $line-height-computed*3 0; 
-    margin-bottom: $line-height-computed*3; 
+    margin-bottom: $line-height-computed*3;
+    padding: 0; 
 }
 
 .header-image {
@@ -124,9 +140,9 @@ article.page {
     }
 }
 
-.transaction-set {
-    background-color: #efefef;
-}
+// .transaction-set {
+//     background-color: #efefef;
+// }
 
 .transaction-item {
     @include make-sm-column(4);
@@ -208,28 +224,27 @@ article.page {
 /*
  * Footer
  */
-footer {
-    &.site-footer {
-        padding-top: $line-height-computed*3;
-        padding-bottom: $line-height-computed*4;
-        border-top: 2px solid $brand-secondary;
 
-        p {
-            font-size: $font-size-small;
-            color: $gray-light;
-        }
-    }
+// Hide footer on mobile
+#nav_footer {
+    display: none;
+}
 
-    // Exceptions for home section
-    .home &.site-footer {
-        p {
-            color: $white;
-        }
-    }
+.site-footer {
+    background-color: $gray-dark;
+    padding-top: $line-height-computed*3;
+    padding-bottom: $line-height-computed*4;
+    border-top: 2px solid $brand-secondary;
+    text-align: center;
 
-    .disclaimer {
-        margin-top: $line-height-computed*0.8;
+    p {
+        font-size: $font-size-small;
+        color: $gray-light;
     }
+}
+
+.disclaimer {
+    margin-top: $line-height-computed*0.8;
 }
 
 
@@ -241,11 +256,6 @@ footer {
     background: url('assets/images/home-bg-la.png') no-repeat center center fixed;
     @include bg-cover;
 
-    // .content-area {
-    //     padding: 0;
-    //     margin: 0;
-    //     border: 0;
-    // }
     .entry-header, .entry-content {
         @include make-md-column(12);
     }
@@ -256,7 +266,7 @@ footer {
 
     .site-main {
         min-height: 50vh;
-        padding: $line-height-computed*3 0 $line-height-computed*6 0;
+        padding: $line-height-computed*6 0 $line-height-computed*6 0;
     }
 
     .entry-title {
@@ -267,16 +277,79 @@ footer {
     .navbar, footer.site-footer {
         border: 0;
     }
+
+    // Footer
+    .site-footer {
+        p {
+            font-size: $font-size-base;
+            color: $white;
+        }
+    }
+
 }
 
-// #content {
-//     @include container-fixed();
-// }
+/*
+ * Media Queries
+ * -------------
+ * See _mediaqueries.scss for details
+ */
 
-// #primary {
-//     @include make-row();
-// }
+// Medium 
+@include md {
 
-// #main {
-//     @include make-md-column(12);
-// }
+    // Underline on sidebar title
+    .page {
+        .sidebar-line {
+            display: inline-block;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+    
+    /*
+     * Navigation
+     */ 
+
+    // On larger screens, hide slicknav and show inline menu
+    #menu, #masthead {
+        display: block;
+
+    }
+
+    .slicknav_menu {
+        display: none;
+    }
+
+    .navbar {
+        padding: $line-height-computed*3 0;
+        border-bottom: 2px solid $brand-secondary;
+    }
+
+    .navbar-brand {
+        display: block;
+    }
+
+    /*
+     * Content
+     */
+    .content-area {
+        padding: $line-height-computed*3 0; 
+    }
+
+    .home {
+        .site-main {
+            min-height: 50vh;
+            padding: $line-height-computed*3 0 $line-height-computed*6 0;
+        }
+    }
+
+    // Display footer
+    #nav_footer {
+        display: block;
+    }
+
+    .site-footer {
+        background: none;
+        text-align: left;
+    }
+}
