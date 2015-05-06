@@ -1,4 +1,10 @@
 /*
+ * All CSS Mobile-First! 
+ * ---------------------
+ *
+ */
+
+/*
  * Navigation
  */
 
@@ -144,17 +150,14 @@ article.page {
     }
 }
 
-// .transaction-set {
-//     background-color: #efefef;
-// }
 
 .transaction-item {
     @include make-sm-column(4);
-    padding: 2em;
+    padding: 2em 1em;
     background-color: #fff;
     text-align: center;
     overflow: hidden;
-    border-bottom: 1px solid $gray-lighter;
+    border-bottom: 1px solid $gray-lighterer;
 
     h2, h3, h4 {
         font-weight: normal;
@@ -299,6 +302,29 @@ article.page {
 
 // Medium 
 @include md {
+
+    body {
+        border: 1.1rem solid #fff;
+
+        // Decorative fixed white borders on top of body
+        &:before, &:after {
+            z-index: 99999;
+            content: "";
+            position: fixed;
+            background: #fff;
+            left: 0;
+            right: 0;
+            height: 1.1rem;
+        }
+    
+        &:before {
+            top: 0;
+        }
+    
+        &:after {
+            bottom: 0;
+        }
+    }
    
     /*
      * Navigation
@@ -358,11 +384,44 @@ article.page {
         }
     }
 
-    .transaction-item {
-        border-right: 1px solid $gray-lighter;
+    .transaction-set {
+        display: table;
+        border-collapse: collapse;
+    }
 
-        &:last-child {
-            border-right: none !important;
+    .transaction-item {
+
+        // A horrible (yet seemingly inevitable) mess of hacks to get proper borders
+        display: table-cell;
+        padding: 2em;
+        border: 1px solid $gray-lighterer;
+
+        .row &:first-child {
+            border-right: 0;
+        }
+
+        .row &:last-child {
+            border-left: 0;
+        }
+
+        .row:first-child & {
+            border-top: 0;
+        }
+
+        .row:last-child & {
+            border-bottom: 0;
+
+            &:first-child {
+                border-right: 1px solid $gray-lighterer;
+            }
+        }
+
+        .row &:first-child {
+            border-left: 0;
+        }
+
+        .row &:last-child {
+            border-right: 0;
         }
     }
 
