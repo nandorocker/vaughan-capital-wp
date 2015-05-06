@@ -16,6 +16,8 @@ get_header(); ?>
 while ( have_posts() ) : the_post(); // begin current page loop  
 ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<?php get_template_part( 'content', 'thumbnail' ); ?>
+				
 				<header class="entry-header">
 					<?php the_title( '<h2 class="entry-title sidebar-line">', '</h2>' ); ?>
 				</header><!-- .entry-header -->

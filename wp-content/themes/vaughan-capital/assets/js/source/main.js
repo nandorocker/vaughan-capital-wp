@@ -1,6 +1,7 @@
 (function($) {
-	if (typeof SiteParameters != 'undefined') {
-		var t_dir = SiteParameters.theme_directory;
+	var t_dir = SiteParameters.theme_directory;
+
+	if (SiteParameters.is_home) {
 
 		/*
 		 * Backstretch slideshow
@@ -16,8 +17,11 @@
 	 * Slicknav
 	 */
 	$('#menu').slicknav({
-		label: 'Vaughan Capital Advisors',
+		label: '',
 		closeOnClick: true
 	});
+
+	// Prepend logo
+	$('.slicknav_menu').prepend('<a class="slacknav-brand" href="/" rel="home"><img alt="Vaughan Capital Advisors" src="' + t_dir + '/assets/images/vaughan-logo.png"></a>');
 
 })(jQuery);
