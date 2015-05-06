@@ -75,7 +75,6 @@ module.exports = function(grunt) {
             all: [
                 'Gruntfile.js',
                 'assets/js/source/**/*.js',
-                'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js',
                 'bower_components/slicknav/jquery.slicknav.js',
                 'bower_components/jquery-backstretch/jquery.backstretch.js'
             ]
@@ -107,11 +106,6 @@ module.exports = function(grunt) {
                 files: {
                     'assets/js/main.min.js': [
                         'assets/js/source/main.js'
-                    ],
-
-                    // Bootstrap.js
-                    'assets/js/vendor/bootstrap.min.js': [
-                        'bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'
                     ],
 
                     // Backstretch

@@ -13,16 +13,18 @@
 .nav {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: .8em;
+    font-size: 1.3rem;
 
     /* Override Bootstrap's navigation margins so it can left-align with page */
-    > li > a {
-        padding-right: $line-height-computed;
-        padding-left: $line-height-computed*0.25;
+    > li {
+
+        > a {
+            padding-right: $line-height-computed;
+            padding-left: $line-height-computed*0.25;
+        }
     }
 
     /* Removes BS's pill background */
-
     > li > a:hover {
             background-color: transparent;
     }

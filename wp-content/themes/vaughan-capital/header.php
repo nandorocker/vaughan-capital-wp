@@ -24,8 +24,6 @@
 
 	<div id="page" class="hfeed site">
 
-		<!-- <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', '_mbbasetheme' ); ?></a> -->
-
 		<header id="masthead" class="navbar site-header container" role="banner">
 			<!-- Brand -->
 			<div class="navbar-header">
