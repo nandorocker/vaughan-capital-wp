@@ -24,8 +24,16 @@ get_header(); ?>
 				<div class="transactions jumbotron">
 
 				<?php
-					// get all categories
-					$cats = get_categories('child_of=3');
+					// Display all categories, with items inside
+					//
+					$cats = get_categories( array(
+
+						'child_of' => 3,
+						'posts_per_page' => -1,
+						'orderby' => 'description',
+						'order' => ASC
+
+					));
 
 					// loop through categories
 					foreach($cats as $cat) {
@@ -34,7 +42,7 @@ get_header(); ?>
 
 						// setup the category ID
 	                    $cat_id = $cat->term_id;
-
+	                    the_field('display_order');
 	                    // Make a header for the category
 	                    ?><!-- Transaction Set (end-to-end) -->
 	                    <section class="container">
