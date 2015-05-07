@@ -155,7 +155,6 @@ article.page {
     }
 }
 
-
 .transaction-item {
     @include make-sm-column(4);
     padding: 2em 0.5em;
@@ -238,7 +237,6 @@ article.page {
 }
 
 .site-footer {
-    background-color: $gray-darker;
     padding-top: $line-height-computed*3;
     padding-bottom: $line-height-computed*4;
     border-top: 2px solid $brand-secondary;
@@ -246,7 +244,6 @@ article.page {
 
     p {
         margin: 0;
-        font-size: $font-size-small;
         font-style: italic;
         color: $gray-light;
     }
@@ -307,6 +304,11 @@ article.page {
 
 // X-Small
 @include xs {
+
+    .transactions > section:first-child {
+        margin-top: $line-height-computed*2;
+    }
+
     .transaction-item {
         padding: 2em 4em;
     }
@@ -340,6 +342,11 @@ article.page {
         &:after {
             bottom: 0;
         }
+    }
+
+    // Display footer
+    #nav_footer {
+        display: block;
     }
 
     .transaction-item {
@@ -457,13 +464,8 @@ article.page {
         }
     }
 
-    // Display footer
-    #nav_footer {
-        display: block;
-    }
-
     .site-footer {
-        background: none;
+        font-size: $font-size-small;
         text-align: left;
     }
 }
