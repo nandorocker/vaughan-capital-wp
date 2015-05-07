@@ -24,7 +24,7 @@
 
 // xs and bigger
 @mixin xs {
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-xs-min) {
 		@content;
 	}
 }
