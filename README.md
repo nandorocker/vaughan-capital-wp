@@ -16,6 +16,8 @@
 
 ### Transactions
 - Transactions are ordered by date. Replace each transaction's post date by the actual date when the project was completed
+- Categories are ordered by the number on each category's "description" field. Do not add anything else in that field! It's an awful hack, but Wordpress makes it hard to use custom fields for this
+- Transaction item images are 444 x 300px
 
 ---
 
