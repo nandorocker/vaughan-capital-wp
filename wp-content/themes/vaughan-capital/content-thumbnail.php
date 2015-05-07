@@ -11,8 +11,6 @@
 		$post_thumbnail_id = get_post_thumbnail_id($post->ID);
 		$post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
 
-		// echo "<div class='col-xs-12'>";
 		echo "	<figure class='header-image' style='background-image: url(" . $post_thumbnail_url . ");'></figure>";
-		// echo "</div>";
 	}
 ?>
