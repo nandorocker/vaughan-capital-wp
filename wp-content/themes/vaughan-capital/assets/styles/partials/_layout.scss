@@ -47,17 +47,18 @@
 
 .slicknav_menu {
     display: block;
+    padding: 10px;
     background-color: transparent !important;
 }
 
 .slicknav_btn {
     background: none;
-    margin-top: 12px;
+    margin-top: 20px;
 }
 
 .slacknav-brand {
     float: left;
-    width: 180px;
+    width: 140px;
 
     img {
         width: 100%;
@@ -147,13 +148,17 @@ article.page {
         > h2 {
             margin-bottom: $line-height-computed*2;
         }
+
+        &:first-child {
+            margin-top: 0;
+        }
     }
 }
 
 
 .transaction-item {
     @include make-sm-column(4);
-    padding: 2em 1em;
+    padding: 2em 0.5em;
     background-color: #fff;
     text-align: center;
     overflow: hidden;
@@ -182,7 +187,7 @@ article.page {
     
     > img {
         position: relative;
-        max-width: 75%;
+        width: 100%;
         bottom: 15%;
     }
 }
@@ -300,9 +305,20 @@ article.page {
  * See _mediaqueries.scss for details
  */
 
+// X-Small
+@include xs {
+    .transaction-item {
+        padding: 2em 4em;
+    }
+
+    .transaction-img img {
+        width: 100%;
+    }
+}
+
 // Small
 @include sm {
-    
+
     body {
         border: 1.1rem solid #fff;
 
@@ -324,6 +340,17 @@ article.page {
         &:after {
             bottom: 0;
         }
+    }
+
+    .transaction-item {
+        padding: 2em 1em;
+        // height: 650px;
+    }
+}
+
+@include sm-only {
+    .transaction-descr {
+        height: 10.5em;
     }
 }
 
@@ -394,6 +421,7 @@ article.page {
     }
 
     .transaction-item {
+        height: 500px;
 
         // A horrible (yet seemingly inevitable) mess of hacks to get proper borders
         display: table-cell;
