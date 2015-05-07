@@ -300,9 +300,9 @@ article.page {
  * See _mediaqueries.scss for details
  */
 
-// Medium 
-@include md {
-
+// Small
+@include sm {
+    
     body {
         border: 1.1rem solid #fff;
 
@@ -325,6 +325,10 @@ article.page {
             bottom: 0;
         }
     }
+}
+
+// Medium 
+@include md {
    
     /*
      * Navigation
